@@ -36,8 +36,13 @@ function question2(arr1 , arr2){
     return (arr3)
 }
 
-function question3(){
+function question4(arr){
+    arr2 = arr.map(num => Math.ceil(num))
+    return arr2
+}
 
+function question5(){
+    
 }
 
 
@@ -45,10 +50,10 @@ function question3(){
 const answer1 = question1([1, 2, 4, 0]);
 const answer1_2 = question1('w3resource');
  const answer2 = question2([1,0,2,3,4,] , [3,5,6,7,8,13]);
-// const answer3 = question3('pass sample input');
+ const answer4 = question4([1.5, 2.56, 5.1, 12.33]);
 
 
 console.log(answer1);
 console.log(answer1_2);
  console.log(answer2);
-// console.log(answer3);
+console.log(answer4);
