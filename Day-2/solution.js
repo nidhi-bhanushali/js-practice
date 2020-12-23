@@ -7,8 +7,33 @@ function question1(input){
    return false;
 }
 
-function question2(){
+function question2(arr1 , arr2){
+    const arr3 = []
+    arrayCount = 0
+    if(arr1.length === 0){
+        return 'array1 has no elements'
+    }
 
+    
+    if(arr2.length === 0){
+        return 'array2 has no elements'
+    }
+
+   while(arrayCount < arr1.length && arrayCount < arr2.length){
+        arr3.push(arr1[arrayCount] + arr2[arrayCount])
+        arrayCount++
+   }
+
+   if(arrayCount === arr1.length){
+       for(let i = arrayCount ; i< arr2.length ; i++){
+           arr3.push(arr2[i]);
+       }
+   }else{
+    for(let i = arrayCount ; i< arr1.length ; i++){
+        arr3.push(arr1[i]);
+    }
+   }
+    return (arr3)
 }
 
 function question3(){
@@ -19,11 +44,11 @@ function question3(){
 
 const answer1 = question1([1, 2, 4, 0]);
 const answer1_2 = question1('w3resource');
-// const answer2 = question2('pass sample input');
+ const answer2 = question2([1,0,2,3,4,] , [3,5,6,7,8,13]);
 // const answer3 = question3('pass sample input');
 
 
 console.log(answer1);
 console.log(answer1_2);
-// console.log(answer2);
+ console.log(answer2);
 // console.log(answer3);
